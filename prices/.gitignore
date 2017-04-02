@@ -1,0 +1,4 @@
+.idea/*
+*.pyc
+praw.ini
+api_keys.py
