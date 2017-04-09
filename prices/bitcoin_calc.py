@@ -3,7 +3,7 @@ from datetime import datetime
 
 from coindesk import btc_interval
 
-
+#shows a dataframe of price on a interval of dates 
 def bpi_df(start, end):
     btc = btc_interval(start, end)
     btc = btc['bpi']
@@ -17,7 +17,7 @@ def percent_change(df):
 
 def merger(df, df2):
     merge_df = df.merge(df2.to_frame(), left_index=True, right_index=True)
-    merge_df.columns = ['USD', 'Date', 'percent_change']
+    merge_df.columns = ['Date', 'USD', 'percent_change']
     return merge_df
 
 
